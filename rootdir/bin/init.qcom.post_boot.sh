@@ -3513,6 +3513,14 @@ case "$target" in
     ;;
 esac
 
+# Post-setup services
+case "$target" in
+    "sm6150")
+
+        # Enable PowerHAL hint processing
+        setprop vendor.powerhal.init 1
+   ;;
+esac
 
 case "$target" in
     "lito")

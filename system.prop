@@ -19,6 +19,11 @@ persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
+# Dex
+dalvik.vm.dex2oat64.enabled=true
+persist.bg.dexopt.enable=true
+dalvik.vm.dexopt.secondary=true
+
 # Graphics
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096

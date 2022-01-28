@@ -142,7 +142,10 @@ dalvik.vm.systemuicompilerfilter=speed
 persist.vendor.dpmhalservice.enable=1
 
 # Display post-processing
+debug.hwui.use_hint_manager=true  
+debug.hwui.target_cpu_time_percent=30
 ro.vendor.display.sensortype=2
+vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
 drm.service.enabled=true

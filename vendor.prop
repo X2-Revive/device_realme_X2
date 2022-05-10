@@ -144,6 +144,7 @@ persist.vendor.dpmhalservice.enable=1
 # Display post-processing
 debug.hwui.use_hint_manager=true  
 debug.hwui.target_cpu_time_percent=30
+debug.sf.disable_client_composition_cache=1
 ro.vendor.display.sensortype=2
 vendor.gralloc.enable_fb_ubwc=1
 

@@ -6,6 +6,8 @@ allow hal_camera_default proc_flash:file rw_file_perms;
 
 allow hal_camera_default property_type:file *;
 
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;
+
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, oppo_debug_prop)
 

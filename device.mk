@@ -301,6 +301,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/nfc/nfc_feature.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/nfc_feature.xml
 
+# Partition
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Parts
 PRODUCT_PACKAGES += \
     RealmeParts \

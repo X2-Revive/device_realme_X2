@@ -153,9 +153,6 @@ ro.boot.realme.lockstate=0
 # FM
 vendor.hw.fm.init=0
 
-# Factory Reset Protection
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 

@@ -89,6 +89,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
+ODM_MANIFEST_HAS_NFC_FILES := $(DEVICE_PATH)/manifest_has_nfc.xml
+ODM_MANIFEST_SKUS += \
+    has_nfc
+
 # OTA package
 TARGET_OTA_ALLOW_NON_AB := true
 AB_OTA_UPDATER := false

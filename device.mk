@@ -168,6 +168,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor
 
 PRODUCT_PACKAGES += \
+    libloc_net_iface \
+    liblocdiagiface \
     apdr.conf \
     flp.conf \
     gnss_antenna_info.conf \

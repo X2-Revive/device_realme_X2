@@ -84,5 +84,3 @@ config.disable_rtt=true
 
 # Wireless display
 debug.sf.latch_unsignaled=0
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0

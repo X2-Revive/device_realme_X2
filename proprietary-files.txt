@@ -890,10 +890,6 @@ odm/lib/vendor.oplus.hardware.orms@1.0.so
 odm/lib64/libormshalclient.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
-# PASR - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|f4a4ca6c518639551fb60e2a0287692d455bddd8
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|ac738d8aba807b3b150618ae89a9994453fd7b1f
-
 # Perf
 system_ext/etc/seccomp_policy/perfservice.policy
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service

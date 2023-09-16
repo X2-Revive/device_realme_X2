@@ -1122,3 +1122,6 @@ service WifibdfVersion /odm/bin/vendor.autochmod.sh "WifibdfVersion"
     group root
     oneshot
 #endif /* VENDOR_EDIT */
+
+on boot && property:persist.sys.usb.config=*
+    setprop sys.usb.config ${persist.sys.usb.config}

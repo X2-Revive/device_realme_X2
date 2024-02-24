@@ -57,6 +57,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/lib64/libCOppLceTonemapAPI.so': blob_fixup()
+    .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

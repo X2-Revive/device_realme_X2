@@ -119,8 +119,6 @@ on early-boot
     write /sys/devices/virtual/npu/msm_npu/boot 1
     write /sys/devices/virtual/cvp/cvp/boot 1
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
-    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
-    setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 
     chown system system /mnt/vendor/persist/data/pfm/licenses
     chmod 0775 /mnt/vendor/persist/data/pfm/licenses
@@ -415,12 +413,6 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-service nqnfcinfo /system/vendor/bin/nqnfcinfo
-    class late_start
-    group nfc
-    user system
-    oneshot
-
 service iop /system/vendor/bin/iop
     class main
     user root
@@ -691,13 +683,6 @@ service iprenew_wigig0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
-    class main
-    user wifi
-    group wifi system inet net_admin
-    capabilities NET_ADMIN
-    oneshot
-
 service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
     user root
     group root
@@ -794,11 +779,6 @@ on property:sys.boot_completed=1
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-service qvop-daemon /vendor/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -947,16 +927,6 @@ service vendor.LKCore-rel /vendor/bin/LKCore
     user system
     group system log diag
 
-service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
-    class late_start
-    user system
-    group system
-
-service esepmdaemon /system/vendor/bin/esepmdaemon
-    class core
-    user system
-    group nfc
-
 on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
@@ -1012,15 +982,6 @@ service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.andro
     disabled
     oneshot
     keycodes 114 115 116
-
-#ifdef VENDOR_EDIT
-#man.wang@Camera for Laser daemon, 2020/10/23
-service vl53l1_daemon_main /odm/bin/vl53l1_daemon_main
-    class late_start
-    user root
-    group root
-    socket vl53l1_daemon stream 660 root system
-#endif
 
 #Set GPU Opengles version
 on property:vendor.opengles.version=*
@@ -1113,15 +1074,6 @@ service wifitestdiag /odm/bin/wifi_diag
 on property:sys.usb.config=diag,adb && property:sys.usb.configfs=1
     start wifitestdiag
 #endif /* OPLUS_FEATURE_WIFI_FTM */
-#ifdef VENDOR_EDIT
-#Liuchen@CONNECTIVITY.WIFI.BASIC.HARDWARE.484186, 2020/10/17
-#Add for : Wifi BDF version
-service WifibdfVersion /odm/bin/vendor.autochmod.sh "WifibdfVersion"
-    class late_start
-    user root
-    group root
-    oneshot
-#endif /* VENDOR_EDIT */
 
 on boot && property:persist.sys.usb.config=*
     setprop sys.usb.config ${persist.sys.usb.config}

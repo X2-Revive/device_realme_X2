@@ -280,7 +280,7 @@ $(call soong_config_set,surfaceflinger,udfps_lib,//$(LOCAL_PATH):libudfps_extens
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service \
+    android.hardware.usb@1.3-service.basic \
     init.qcom.usb.rc \
     init.qcom.usb.sh
 

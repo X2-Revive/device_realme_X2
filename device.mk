@@ -333,6 +333,13 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+PRODUCT_PACKAGES += \
+    libcurl.vendor:64 \
+    libjson \
+    libjsoncpp.vendor \
+    libpng.vendor \
+    libsqlite.vendor:64
+
 # QTI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \

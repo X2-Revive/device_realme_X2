@@ -419,5 +419,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
+
 # Inherit from vendor if exists
 $(call inherit-product-if-exists, vendor/realme/X2/X2-vendor.mk)

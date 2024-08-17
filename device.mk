@@ -59,11 +59,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService-Soong \
-    com.dsi.ant@1.0.vendor
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
@@ -94,11 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    android.hardware.bluetooth.audio-impl
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2240
@@ -106,13 +97,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
-    libcamera2ndk_vendor \
-    libgui_vendor \
-    libstdc++_vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    android.hardware.camera.provider@2.4-service_64
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -133,19 +119,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.memtrack-service \
     gralloc.qcom \
-    hwcomposer.qcom \
-    libqdMetaData \
-    libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
-    vendor.display.config@1.14.vendor \
-    vendor.display.config@2.0.vendor \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
+    hwcomposer.qcom
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -155,12 +129,7 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
-    android.hardware.drm-service.clearkey \
-    libcrypto_shim.vendor
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.drm-service.clearkey
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -191,17 +160,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0.vendor
-
-PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_x2)
 
@@ -228,10 +186,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.x2
@@ -244,14 +198,6 @@ PRODUCT_COPY_FILES += \
      hardware/qcom-caf/sm8150/media/conf_files/sm6150/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.ve
 
 TARGET_SUPPORTS_OMX_SERVICE := false
-
-# Net
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
-
-# Neural networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -276,9 +222,6 @@ PRODUCT_PACKAGES += \
     RealmeProximityHelper
 
 # Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2.vendor
-
 PPRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
@@ -295,32 +238,12 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor \
     android.hardware.power-service-qti
-
-# QMI
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
 
 # QTI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    libjson \
-    librmnetctl \
-    libxml2 \
-    libprotobuf-cpp-full \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Rootdir
 PRODUCT_COPY_FILES += \
@@ -339,10 +262,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
-# Service Tracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

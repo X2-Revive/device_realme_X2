@@ -54,7 +54,7 @@ odm/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
 vendor/lib/rfsa/adsp/libVDHexagonSuperPhoto_skel.so
-vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
+vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so;MODULE_SUFFIX=_vendor
 vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 
 # ADSP Modules (system) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
@@ -431,11 +431,11 @@ vendor/lib64/libOPLUS_aisd.so
 vendor/lib64/libOPPORectify.so
 vendor/lib64/libSEC.HybridHDR.so
 vendor/lib64/libSonyIMX471RmscLibrary.so
-vendor/lib64/libVDDualCameraBlurlessAPI.so
+vendor/lib64/libVDDualCameraBlurlessAPI.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libVDPostureDetection.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libmpbase.so
+vendor/lib64/libmpbase.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libocam_common.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libswregistrationalgo.so
@@ -563,7 +563,7 @@ system_ext/lib64/vendor.qti.hardware.cvp@1.0.so|ac68aa76d1b4f310f4cbc03f9a90eb0f
 vendor/lib64/libcvp.so|08b4c2b43b8f362d17c4f1becd43eae12e07ec4f
 vendor/lib64/libcvp_common.so|0c19503711057ef3fbf4fba771a310b29518bcda
 vendor/lib64/libcvp_stub.so|fb966906a26400862f65f84a30db7cb000b0291a
-vendor/lib64/vendor.qti.hardware.cvp@1.0.so|24962a93d2bc506b5ea29891eff853ae0f3c66c8
+vendor/lib64/vendor.qti.hardware.cvp@1.0.so;MODULE_SUFFIX=_vendor|24962a93d2bc506b5ea29891eff853ae0f3c66c8
 
 # Display calibration data
 vendor/etc/qdcm_calib_data_oppo19031samsung_AMS655LSI60_1080_2400_cmd_mode_dsi_panel.xml
@@ -599,7 +599,7 @@ system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|74ec0d8e2ef3d7e3b0a730da9b97
 # DPM (vendor) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/dpmQmiMgr|e682a4c6e684be96de179158c65e5732f052ab2c
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
 # DRM - from Redmi/lmi/lmi:11/RKQ1.200826.002/20.10.19:user/release-keys
@@ -659,7 +659,7 @@ system_ext/lib64/vendor.qti.hardware.fm@1.0.so|0bfc9d9097698b7cc8cb74721cb971a80
 # FM (vendor) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib64/ftm_fm_lib.so|df09a79437966fd5c1b901c91841d5df48dc70c7
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f2e143c684cd9f31372df63b44c163744b2ca0b7
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor|f6e23f902b7e15232b20af55161a24da93ffe25f
 
 # Gatekeeper - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
@@ -826,8 +826,8 @@ vendor/bin/npu_launcher|1f4272524efd19dba9b806298785a27f7ae614d8
 vendor/lib64/libnpu.so|892331564b7fb1463eebd8d5427b9735198da875
 
 # MM OSAL - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
-vendor/lib/libmmosal.so|6f71fd1d54d6ca8df7d362a72517b082ed412bbe
-vendor/lib64/libmmosal.so|568c9dff1fe27cc4cd874181bf0d8ab5dc6d372b
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor|6f71fd1d54d6ca8df7d362a72517b082ed412bbe
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor|568c9dff1fe27cc4cd874181bf0d8ab5dc6d372b
 
 # Media (system) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 system_ext/lib/libmmosal.so|e29bdf82903e2293dc3ee74a2b9d69a7f1df25dc
@@ -1194,7 +1194,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # Samsung Display
 odm/etc/samsung1024_ams641rw16_eyeprotect_data.xml

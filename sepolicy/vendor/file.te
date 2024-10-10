@@ -10,6 +10,9 @@ type proc_oppoversion, fs_type, proc_type;
 # Oppo FP
 type proc_oppo_fp, fs_type, proc_type;
 
+# Oppo nv
+type radio_vendor_data_file, core_data_file_type, data_file_type, file_type;
+
 # Camera
 type vendor_persist_camera_file, file_type;
 

@@ -250,6 +250,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/vendor,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+TARGET_SUPPORTS_OMX_SERVICE := false
+
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor

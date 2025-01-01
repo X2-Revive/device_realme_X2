@@ -132,8 +132,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.memtrack-service \
-    gralloc.sm6150 \
-    hwcomposer.sm6150 \
+    gralloc.qcom \
+    hwcomposer.qcom \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \

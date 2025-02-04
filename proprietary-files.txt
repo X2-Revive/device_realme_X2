@@ -1,5 +1,8 @@
 # All unpinned blobs below are extracted from RMX1993EX_11_F.26
 
+# Current blobs with ELF checks disabled:
+# imsdatadaemon, libcne, libwqe, lowi-server depend on libwpa_client, which is a gnu makefile target
+
 # ACDB
 odm/etc/acdbdata/Bluetooth_cal.acdb
 odm/etc/acdbdata/General_cal.acdb
@@ -519,12 +522,12 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c9
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
-vendor/lib64/libcne.so|03cf15975c6afe694c1a5c7d4df96aed7b5a5170
+vendor/lib64/libcne.so;DISABLE_CHECKELF|03cf15975c6afe694c1a5c7d4df96aed7b5a5170
 vendor/lib64/libcneapiclient.so|0973dc05f6d6d9c469fc804693af79e6f3a5056a
 vendor/lib64/libcneoplookup.so|60d6abe85061de4fa75e5e4f69d477f37f1f8f64
 vendor/lib64/libcneqmiutils.so|c2e2658698eb8b312ca6b28c1a1088a331bb28b9
 vendor/lib64/libwms.so|c1583704d05d38b6957a84c3fcc4660e6380886e
-vendor/lib64/libwqe.so|f80786b26c9ee705f1695f798fca1f5f45bee19c
+vendor/lib64/libwqe.so;DISABLE_CHECKELF|f80786b26c9ee705f1695f798fca1f5f45bee19c
 vendor/lib64/libxml.so|6d5f9b6be0212bde7b961803fec9302e8529b54a
 vendor/lib64/vendor.qti.data.factory@2.0.so|748bfbaa57a409b8962e2b1725e1415e423a7315
 vendor/lib64/vendor.qti.data.factory@2.1.so|bb1f3fa22563282ee24bf03ca681fdc45551feef
@@ -669,7 +672,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a
 # GPS - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/garden_app|ce9eea6f63672625239cf95a70ad9f157554703b
 vendor/bin/loc_launcher|be9f321e7c03e038749239ae4accd3db00949e2c
-vendor/bin/lowi-server|003a995b5672cb5509b2eec7a2e573f614e61a7b
+vendor/bin/lowi-server;DISABLE_CHECKELF|003a995b5672cb5509b2eec7a2e573f614e61a7b
 vendor/bin/xtra-daemon|91a6e06388a6657bea901e5270d9cc0f67707e46
 vendor/bin/xtwifi-client|893ee58d988edff12a191344d726222d4da1803e
 vendor/bin/xtwifi-inet-agent|2453d2776049b9ef2b29f6abe1256359f321a088
@@ -1150,7 +1153,7 @@ system_ext/priv-app/ims/ims.apk|ed68ecd630ddbd49e88bd0b2e3b50ee35c334ef0
 
 # Radio - IMS (vendor)
 vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
+vendor/bin/imsdatadaemon;DISABLE_CHECKELF
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/etc/init/ims_rtp_daemon.rc

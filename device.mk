@@ -209,6 +209,9 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_x2)
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \

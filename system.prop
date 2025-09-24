@@ -87,3 +87,10 @@ config.disable_rtt=true
 debug.sf.latch_unsignaled=1
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# InfinityX prop
+ro.product.marketname=Realme X2
+ro.infinity.soc=Qualcomm SDM730 Snapdragon 730G
+ro.infinity.battery=Li-Po 4000 mAh
+ro.infinity.display=1080 x 2340 pixels, 20:9 ratio, 6.4 inches, Super AMOLED
+ro.infinity.camera=64MP (wide) / 8MP (telephoto) / 2MP (ultrawide) / 2MP (depth)

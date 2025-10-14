@@ -418,9 +418,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# UDFPS Init
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(LOCAL_PATH):libudfps_extension.x2)
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+
+# Vendor Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_x2)
 
 # Vendor service manager
 PRODUCT_PACKAGES += \

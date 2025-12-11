@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
+    libtinyxml2-v34.vendor \
     libvulkan \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \

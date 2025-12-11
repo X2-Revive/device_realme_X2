@@ -54,6 +54,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'odm/lib64/libCOppLceTonemapAPI.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    ('vendor/lib64/camera.device@3.5-external-impl.so', 'vendor/lib64/camera.device@3.4-external-impl.so', 'vendor/lib64/liblearningmodule.so', 'vendor/lib64/camera.device@3.6-external-impl.so', 'vendor/lib64/libdpps.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm@latest-service.clearkey
 
 # GPS
 PRODUCT_PACKAGES += \

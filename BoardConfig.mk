@@ -121,6 +121,11 @@ $(foreach p, $(call to-upper, $(BOARD_X2_DYNPART_PARTITION_LIST)), \
     $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
+# Partitions - Reserved Sizes
+ifneq ($(WITH_GMS), true)
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+endif
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sm6150

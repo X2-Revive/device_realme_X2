@@ -117,10 +117,6 @@ PRODUCT_PACKAGES += \
     libstdc++_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI

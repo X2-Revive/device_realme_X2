@@ -171,7 +171,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey \
-    libcrypto-v33
+    libcrypto_shim
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -260,7 +260,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.x2
+    android.hardware.light-service.lineage
 
 # Media
 PRODUCT_PACKAGES += \
@@ -386,8 +386,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal_x2 \
-    libsensorndkbridge
+    android.hardware.sensors-service.multihal
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -433,6 +432,10 @@ $(call soong_config_set,surfaceflinger,udfps_lib,//$(LOCAL_PATH):libudfps_extens
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libtinyxml2-v34
 
 # Vendor Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_x2)

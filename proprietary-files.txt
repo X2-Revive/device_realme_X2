@@ -105,17 +105,10 @@ vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libcirrusspkrprot.so
-vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
-vendor/lib/libexthwplugin.so
-vendor/lib/libhdmiedid.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libhfp.so
 vendor/lib/libqtigef.so
-vendor/lib/libsndmonitor.so
-vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib64/libadiertac.so
@@ -124,15 +117,8 @@ vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
-vendor/lib64/libbatterylistener.so
-vendor/lib64/libcirrusspkrprot.so
-vendor/lib64/libcomprcapture.so
-vendor/lib64/libexthwplugin.so
 vendor/lib64/libhdmipassthru.so
-vendor/lib64/libhfp.so
 vendor/lib64/libqtigef.so
-vendor/lib64/libsndmonitor.so
-vendor/lib64/libspkrprot.so
 vendor/lib64/libssrec.so
 
 # Audio HAL (odm)
@@ -199,11 +185,15 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Bluetooth (Audio)
+odm/lib/vendor.oplus.hardware.bluetooth_audio@1.0.so
+odm/lib64/vendor.oplus.hardware.bluetooth_audio@1.0.so
 vendor/lib/btaudio_offload_if.so
+vendor/lib/oplus_btaudio_offload_if.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib64/btaudio_offload_if.so
+vendor/lib64/oplus_btaudio_offload_if.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/libbluetooth_audio_session_qti.so
@@ -217,7 +207,6 @@ vendor/lib64/libhbtpdsp.so
 vendor/lib64/libhbtpfrmwk.so
 vendor/lib64/libloadalgo_stub.so
 vendor/lib64/libmidasserviceintf.so
-vendor/lib64/libmiracast.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libnative-api.so
@@ -232,7 +221,6 @@ vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libsubsystem_control.so
 vendor/lib64/libtzdrmgenprov.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 
 # Camera-arcsoft
 odm/lib64/libarcsoft_beautyshot.so
@@ -257,6 +245,12 @@ odm/lib64/libarcsoft_smart_denoise.so
 odm/lib64/libarcsoft_super_night_raw.so
 
 # Camera (camerax)
+vendor/lib/libcamxfdalgov7.so
+vendor/lib/libcamxfdalgov8.so
+vendor/lib/libcamxfdengine.so
+vendor/lib/libcamxstatscore.so
+vendor/lib/libcamxswprocessalgo.so
+vendor/lib/libcamxtintlessalgo.so
 vendor/lib64/libcamxfdalgov7.so
 vendor/lib64/libcamxfdalgov8.so
 vendor/lib64/libcamxfdengine.so
@@ -351,6 +345,7 @@ odm/etc/camera/model_fdc.data
 odm/etc/camera/settings_fdc.txt
 odm/etc/camera/singleblur/license_release.license
 odm/etc/camera/stereoParams.bin
+odm/lib/libhwconfigurationutil.so
 odm/lib64/libCOppLceTonemapAPI.so
 odm/lib64/libDxHdcp.so
 odm/lib64/libPerfectlyClearCruxOpt.so
@@ -368,11 +363,12 @@ odm/lib64/libVDUpScale.so
 odm/lib64/lib_rectify.so
 odm/lib64/libapsexif.so
 odm/lib64/libapsjpeg.so
+odm/lib64/libavformat.so
+odm/lib64/libavutil.so
 odm/lib64/libbsproxy.so
 odm/lib64/libc++_shared.so
 odm/lib64/libcdm_metrics_protos.so
 odm/lib64/libcdm_protos.so
-odm/lib64/libdav1d.so.4
 odm/lib64/libffmpeg_utils.so
 odm/lib64/libhta.so
 odm/lib64/libhwconfigurationutil.so
@@ -383,7 +379,6 @@ odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_loader.so
 odm/lib64/libsnpeml.so
 odm/lib64/libstblur_api.so
-odm/lib64/libstblur_capture_api.so
 odm/lib64/libstface_fd_api.so
 odm/lib64/libswresample.so
 odm/lib64/libswscale.so
@@ -391,6 +386,8 @@ odm/lib64/libsymphony-cpu.so
 odm/lib64/libsymphonypower.so
 odm/lib64/libwatermark_photo.so
 vendor/lib/hw/camera.qcom.so
+vendor/lib/libcamera_nn_stub.so
+vendor/lib/libsns_fastRPC_util.so
 vendor/lib/qcom.camera.log.so
 vendor/lib/voc.dat.zip
 vendor/lib64/camera/com.qti.sensor.gc2375.so
@@ -417,6 +414,7 @@ vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override_moorea.so
+vendor/lib64/libcom.oppo.calidatacontainer.so
 vendor/lib64/libDeVIS.so
 vendor/lib64/libEIS.so
 vendor/lib64/libOGLManager.so
@@ -436,7 +434,9 @@ vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_optical_zoom_vs.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/libWaterMark.so
 vendor/lib64/qcom.camera.log.so
+vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -598,7 +598,6 @@ vendor/lib64/libspl.so|0fa8c0711f72fc8a914dce044cf8dddd79ee62e1
 vendor/bin/qseecomd|6d039e936dc833fbac9c121ca19c885b0066e555
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
-vendor/lib/libcppf.so|c18f874bc6135cd83bcc1ffb892e2d4815311aac
 vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
 vendor/lib64/libGPreqcancel_svc.so|285337b6c490b2c08af93168a377c72020d2d78b
 vendor/lib64/libQSEEComAPI.so|776f247b11a43af4d75db7ff04cd663cc7fd720f
@@ -624,11 +623,17 @@ odm/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 odm/lib64/libwvhidl.so
 odm/lib64/mediadrm/libwvdrmengine.so
 
+# DRM
+vendor/lib/libQSEEComAPI.so
+
 # DSP - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
+
+# DSP
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
 
 # Fastcharge firmware
 odm/firmware/fastchg/19771/oplus_vooc_fw.bin
@@ -916,6 +921,8 @@ odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 odm/etc/init/init.network.rc
 
 # Orms
+odm/lib/libormshalclient.so
+odm/lib/vendor.oplus.hardware.orms@1.0.so
 odm/lib64/libormshalclient.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
@@ -1258,6 +1265,10 @@ vendor/etc/sensors/config/talos_power_0.json
 vendor/etc/sensors/config/talos_tmd2725.json
 vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/sns_reg_config
+vendor/lib/libsnsapi.so
+vendor/lib/libsensorslog.so
+vendor/lib/libsnsdiaglog.so
+vendor/lib/libssc.so
 vendor/lib/oplus.sensors.ssc.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/libsensorcal.so
@@ -1327,6 +1338,9 @@ odm/firmware/tp/19771/FW_S3706_SAMSUNG.img
 odm/firmware/tp/19771/FW_S3706_SAMSUNG_FAE.img
 odm/firmware/tp/19771/LIMIT_S3706_SAMSUNG.img
 
+# Touch Improve
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
+
 # Trusted Execution Environment connector
 vendor/lib64/libTouchInputVM.so
 vendor/lib64/libTrustedInput.so
@@ -1345,10 +1359,20 @@ vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
 vendor/lib64/libsecureui.so|e94e17e960e1efaa6571a0e5df879bfde84bcb8f
 vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
 
+# Trusted Execution Environment connector
+vendor/lib/libStDrvInt.so
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
+
 # Trusted User Interface - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|4ba792ee3234dca4cd7ebbd7b3f9003c800f51b4
+
+# Trusted User Interface
+vendor/lib/vendor.qti.hardware.trustedui@1.0.so
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 
 # Vibrator
 vendor/firmware/aw8697_haptic.bin

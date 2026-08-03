@@ -130,7 +130,7 @@ system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e
 system_ext/framework/audiosphere.jar|9c28317f12b93a6d881c80a991ff24716fce4a12
 
 # Audio HAL (vendor)
-vendor/bin/audioflacapp
+vendor/bin/audioflacapp;DISABLE_DEPS
 vendor/lib/hw/audio.primary.sm6150.so
 vendor/lib/hw/sound_trigger.primary.sm6150.so
 vendor/lib64/hw/audio.primary.sm6150.so
@@ -227,7 +227,7 @@ odm/lib64/libarcsoft_beautyshot.so
 odm/lib64/libarcsoft_distortion_correction.so
 odm/lib64/libarcsoft_dualcam_bokeh_api.so
 odm/lib64/libarcsoft_dualcam_refocus_left.so
-odm/lib64/libarcsoft_dualcam_refocus_preview.so
+odm/lib64/libarcsoft_dualcam_refocus_preview.so;DISABLE_CHECKELF
 odm/lib64/libarcsoft_dualcam_refocus_right.so
 odm/lib64/libarcsoft_dualcam_refocus_uw.so
 odm/lib64/libarcsoft_hdr_couple_api.so
@@ -238,11 +238,11 @@ odm/lib64/libarcsoft_high_dynamic_range_couple.so
 odm/lib64/libarcsoft_lensstaindetection.so
 odm/lib64/libarcsoft_low_light_hdr.so
 odm/lib64/libarcsoft_portraitSN_hvx_stub.so
-odm/lib64/libarcsoft_portrait_super_night_raw.so
+odm/lib64/libarcsoft_portrait_super_night_raw.so;DISABLE_CHECKELF
 odm/lib64/libarcsoft_scbokeh_image.so
 odm/lib64/libarcsoft_scbokeh_video.so
 odm/lib64/libarcsoft_smart_denoise.so
-odm/lib64/libarcsoft_super_night_raw.so
+odm/lib64/libarcsoft_super_night_raw.so;DISABLE_CHECKELF
 
 # Camera (camerax)
 vendor/lib/libcamxfdalgov7.so
@@ -262,8 +262,8 @@ vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/camera/components/com.arcsoft.node.ozeis.so
 vendor/lib64/camera/components/com.oppo.node.drawafinfo.so
 vendor/lib64/camera/components/com.oppo.node.oppoengmode.so
-vendor/lib64/camera/components/com.oppo.node.preview.so
-vendor/lib64/camera/components/com.oppo.node.rtb.so
+vendor/lib64/camera/components/com.oppo.node.preview.so;DISABLE_DEPS
+vendor/lib64/camera/components/com.oppo.node.rtb.so;DISABLE_DEPS
 vendor/lib64/camera/components/com.oppo.node.sat.so
 vendor/lib64/camera/components/com.oppo.node.sstabdefer.so
 vendor/lib64/camera/components/com.oppo.node.sstabrealt.so
@@ -346,15 +346,15 @@ odm/etc/camera/settings_fdc.txt
 odm/etc/camera/singleblur/license_release.license
 odm/etc/camera/stereoParams.bin
 odm/lib/libhwconfigurationutil.so
-odm/lib64/libCOppLceTonemapAPI.so
+odm/lib64/libCOppLceTonemapAPI.so;DISABLE_CHECKELF
 odm/lib64/libDxHdcp.so
 odm/lib64/libPerfectlyClearCruxOpt.so
 odm/lib64/libPlatformValidatorShared.so
 odm/lib64/libSNPE.so
 odm/lib64/libSNPE_G.so
 odm/lib64/libVDBayerHDR.so
-odm/lib64/libVDBlurless.so
-odm/lib64/libVDBlurlessAPI_v2.so
+odm/lib64/libVDBlurless.so;FIX_SONAME;DISABLE_CHECKELF
+odm/lib64/libVDBlurlessAPI_v2.so;DISABLE_CHECKELF
 odm/lib64/libVDDualCameraBlurlessAPI.so
 odm/lib64/libVDExternal.so
 odm/lib64/libVDEyeEnhance.so
@@ -363,19 +363,19 @@ odm/lib64/libVDUpScale.so
 odm/lib64/lib_rectify.so
 odm/lib64/libapsexif.so
 odm/lib64/libapsjpeg.so
-odm/lib64/libavformat.so
-odm/lib64/libavutil.so
+odm/lib64/libavformat.so;DISABLE_DEPS
+odm/lib64/libavutil.so;DISABLE_DEPS
 odm/lib64/libbsproxy.so
 odm/lib64/libc++_shared.so
 odm/lib64/libcdm_metrics_protos.so
 odm/lib64/libcdm_protos.so
-odm/lib64/libffmpeg_utils.so
+odm/lib64/libffmpeg_utils.so;DISABLE_DEPS
 odm/lib64/libhta.so
 odm/lib64/libhwconfigurationutil.so
 odm/lib64/libml_util.so
 odm/lib64/libmpbase.so
 odm/lib64/librpmbengclient.so
-odm/lib64/libsnpe_dsp_domains_v2.so
+odm/lib64/libsnpe_dsp_domains_v2.so;DISABLE_CHECKELF
 odm/lib64/libsnpe_loader.so
 odm/lib64/libsnpeml.so
 odm/lib64/libstblur_api.so
@@ -417,8 +417,8 @@ vendor/lib64/hw/com.qti.chi.override_moorea.so
 vendor/lib64/libcom.oppo.calidatacontainer.so
 vendor/lib64/libDeVIS.so
 vendor/lib64/libEIS.so
-vendor/lib64/libOGLManager.so
-vendor/lib64/libOPLUS_aisd.so
+vendor/lib64/libOGLManager.so;DISABLE_CHECKELF
+vendor/lib64/libOPLUS_aisd.so;FIX_SONAME
 vendor/lib64/libOPPORectify.so
 vendor/lib64/libSEC.HybridHDR.so
 vendor/lib64/libSonyIMX471RmscLibrary.so
@@ -434,7 +434,7 @@ vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_optical_zoom_vs.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
-vendor/lib64/libWaterMark.so
+vendor/lib64/libWaterMark.so;DISABLE_CHECKELF
 vendor/lib64/qcom.camera.log.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 
@@ -665,14 +665,14 @@ vendor/bin/garden_app|ce9eea6f63672625239cf95a70ad9f157554703b
 vendor/bin/loc_launcher|be9f321e7c03e038749239ae4accd3db00949e2c
 vendor/bin/lowi-server;DISABLE_CHECKELF|003a995b5672cb5509b2eec7a2e573f614e61a7b
 vendor/bin/xtra-daemon|91a6e06388a6657bea901e5270d9cc0f67707e46
-vendor/bin/xtwifi-client|893ee58d988edff12a191344d726222d4da1803e
+vendor/bin/xtwifi-client;DISABLE_DEPS|893ee58d988edff12a191344d726222d4da1803e
 vendor/bin/xtwifi-inet-agent|2453d2776049b9ef2b29f6abe1256359f321a088
 vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 vendor/etc/xtwifi.conf|ac2189707c0016c31846ccec73e8857d7f566605
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|85d86cfcf3cf60dc69974ed71b17dc6dc8c40381
+vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so;DISABLE_CHECKELF|85d86cfcf3cf60dc69974ed71b17dc6dc8c40381
 vendor/lib64/libaoa.so|18ede2be687d01cdb323e0cff2c7545e2578f21f
-vendor/lib64/libdataitems.so|c2c8d1105007976a2a47a81c9a501c384f343e62
+vendor/lib64/libdataitems.so;DISABLE_CHECKELF|c2c8d1105007976a2a47a81c9a501c384f343e62
 vendor/lib64/libgarden.so|a8d773e5325fdca73c5e0b3b13e854717f67d7f5
 vendor/lib64/libgarden_haltests_e2e.so|37390296251d119258c23e4521114a7e1b4ab565
 vendor/lib64/libgdtap.so|ad5583ba837678f78c84a7ff64a4fae5a3b1097d
@@ -681,7 +681,7 @@ vendor/lib64/libizat_core.so|1d131c204ad121b1acbfe605470ad4b1605f0476
 vendor/lib64/liblbs_core.so|40136bb2e233b56ef2ab9e7ef10588c32d9c9cca
 vendor/lib64/libloc_api_v02.so|6243a4f522114aa5a6b9c6a50c36ed5db8f6a0ff
 vendor/lib64/libloc_socket.so|347eebf332c92d52516e70a89bce3211de0f98df
-vendor/lib64/liblocationservice.so|84d865f854269a901df3a634b9b1bfdb8cc223d7
+vendor/lib64/liblocationservice.so;DISABLE_CHECKELF|84d865f854269a901df3a634b9b1bfdb8cc223d7
 vendor/lib64/liblocationservice_glue.so|4b904ec55591e9268d866ca058f13e6215f80bb7
 vendor/lib64/liblowi_client.so|189be28e5a3fd4aa82ddea3a5b243c7a227c1f7a
 vendor/lib64/liblowi_wifihal.so|b4aeb5762e51c979d32641956adb1f19941d22a0
@@ -876,7 +876,7 @@ vendor/lib/libOmxDsdDec.so|93832f5a8e016a0cd419fca916f29a7987d4af9e
 vendor/lib/libOmxEvrcDec.so|9d5f1457de836c5e86b7f6b99bc7a8b29d05afb3
 vendor/lib/libOmxG711Dec.so|2c3a8f5c52c4c76c7e47d78995b9022a28e01242
 vendor/lib/libOmxQcelp13Dec.so|5c859845e9803a3702c361cc3e2e802f4d3ae303
-vendor/lib/libOmxVideoDSMode.so|c970c8ddd940e8afdc9c4bc6321e00c54587ad73
+vendor/lib/libOmxVideoDSMode.so;DISABLE_DEPS|c970c8ddd940e8afdc9c4bc6321e00c54587ad73
 vendor/lib/libOmxVpp.so|010378466ccb164d9aee0ea47e19fd0ab43917a8
 vendor/lib/libOmxWmaDec.so|17f0f77fb9a27a8381c8dbc77d6aac5c303ac453
 vendor/lib/libstagefright_soft_qtiflacdec.so|aa9a59c8ab8099012625d806f962aba24aa4a7f6

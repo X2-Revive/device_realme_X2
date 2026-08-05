@@ -51,3 +51,6 @@
 
 # SecureElement
 /(vendor|odm)/bin/hw/android\.hardware\.secure_element@1\.0-service-disabled      u:object_r:hal_secure_element_default_exec:s0
+
+# Sensors
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.0-service.multihal_x2   u:object_r:hal_sensors_default_exec:s0

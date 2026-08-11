@@ -413,7 +413,7 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override_moorea.so
+vendor/lib64/hw/com.qti.chi.override_moorea.so;DISABLE_DEPS
 vendor/lib64/libcom.oppo.calidatacontainer.so
 vendor/lib64/libDeVIS.so
 vendor/lib64/libEIS.so
